@@ -37,7 +37,7 @@ bench = function (method, iterations, args, context) {
 
 window.addEventListener('load', (e) => {
    addMyStyle();
-   addBackButtons();
+   //addBackButtons();
    addFunctionalTags();
    addFocusedClass();
    addExpandOrCollapseQuestion();
