@@ -281,7 +281,7 @@ function addFunctionalTags(){
    // we cannot select for .project because:
    //       this would be triggered on every event from any child-.projects 
    window.analyseNoteAllProjects = analyseNoteAllProjects;
-   $("#expandButton").live("click", analyseNoteAllProjects);
+   $("#expandButton").live("click", () => { setTimeout( analyseNoteAllProjects, 1); } );
    $("div.content").live("click keyup", analyseNote);
    $(window).bind("hashchange drop load", analyseNoteAllProjects);
    //setInterval(analyseNoteAllProjects, 500)
@@ -696,7 +696,11 @@ function addMyStyle(){
       }
       .project.h1-proj {
          padding-top: 20px;
-         padding-bottom: 5px;
+         padding-bottom: 10px;
+      }
+
+      .project.workflowytable-proj:not(.parent) > .children {
+         display: flex !important;
       }
 
    `)
