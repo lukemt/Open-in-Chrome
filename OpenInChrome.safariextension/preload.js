@@ -12,7 +12,7 @@ window.addEventListener('load', (e) => {
    window.open = function (url, name, features) {
       location.href = "chromehelper://" + url.split("://")[1];
    };
-   window.log("huge success");
+   console.log("huge success");
       /*
       workflowy.lume.vision
          great website

@@ -7,4 +7,4 @@ s.onload = function() {
     this.remove();
 };
 (document.head || document.documentElement).appendChild(s);
-console.log("some success")
+console.log("some success");
